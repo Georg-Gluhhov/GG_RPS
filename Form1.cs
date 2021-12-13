@@ -14,7 +14,7 @@ namespace GG_RPS
     {
         PictureBox pb, pb1, pb2, pb3, pb4;
         Label lbl, lbl1, lbl2;
-        Button bt;
+        Button bt, bt1;
         Random rnd = new Random();
 
         public int choose = 0;
@@ -32,7 +32,7 @@ namespace GG_RPS
             pb.Size = new Size(100, 100);
             pb.Location = new Point(200, 100);
             pb.ImageLocation = ("../../img/rock.png");
-            pb.SizeMode = PictureBoxSizeMode.AutoSize;
+            pb.SizeMode = PictureBoxSizeMode.StretchImage;
             pb.MouseClick += Pb_MouseClick;
             this.Controls.Add(pb);
             //Paper
@@ -40,7 +40,7 @@ namespace GG_RPS
             pb1.Size = new Size(100, 100);
             pb1.Location = new Point(600, 100);
             pb1.ImageLocation = ("../../img/paper.png");
-            pb1.SizeMode = PictureBoxSizeMode.AutoSize;
+            pb1.SizeMode = PictureBoxSizeMode.StretchImage;
             pb1.MouseClick += Pb1_MouseClick;
             this.Controls.Add(pb1);
             //Scissors
@@ -48,24 +48,22 @@ namespace GG_RPS
             pb2.Size = new Size(100, 100);
             pb2.Location = new Point(1000, 100);
             pb2.ImageLocation = ("../../img/Scissors.png");
-            pb2.SizeMode = PictureBoxSizeMode.AutoSize;
+            pb2.SizeMode = PictureBoxSizeMode.StretchImage;
             pb2.MouseClick += Pb2_MouseClick;
             this.Controls.Add(pb2);
             //Result player 
             pb3 = new PictureBox();
             pb3.Size = new Size(100, 100);
             pb3.Location = new Point(200, 300);
-            pb3.ImageLocation = ("../../image/index.jpg");
-            pb3.SizeMode = PictureBoxSizeMode.AutoSize;
-            pb3.MouseClick += Pb2_MouseClick;
+            pb3.ImageLocation = ("../../img/rock.png");
+            pb3.SizeMode = PictureBoxSizeMode.StretchImage;
             this.Controls.Add(pb3);   
             //Result bot 
             pb4 = new PictureBox();
             pb4.Size = new Size(100, 100);
             pb4.Location = new Point(1000, 300);
-            pb4.ImageLocation = ("../../image/index.jpg");
-            pb4.SizeMode = PictureBoxSizeMode.AutoSize;
-            pb4.MouseClick += Pb2_MouseClick;
+            pb4.ImageLocation = ("../../img/rock.png");
+            pb4.SizeMode = PictureBoxSizeMode.StretchImage;
             this.Controls.Add(pb4);
 
 
@@ -73,9 +71,17 @@ namespace GG_RPS
 
             //Start Button
             bt = new Button();
+            bt.Text = "Сравнить";
             bt.Location = new Point(600, 600);
             bt.Click += Bt_Click;
             this.Controls.Add(bt);
+
+            //Save Button
+            bt1 = new Button();
+            bt1.Text = "Сохранить";
+            bt1.Location = new Point(800, 600);
+            bt1.Click += Bt1_Click;
+            this.Controls.Add(bt1);
 
             //Lbl Result 
             lbl = new Label();
@@ -89,9 +95,18 @@ namespace GG_RPS
             lbl1.Size = new Size(100, 100);
             lbl1.Location = new Point(200, 600);
             this.Controls.Add(lbl1);
+            this.BackColor = System.Drawing.Color.White;
 
 
+        }
 
+        private void Bt1_Click(object sender, EventArgs e)
+        {
+            Hide();
+            save Save = new save();
+            Save.ShowDialog();
+            Save = null;
+            Show();
         }
 
         private void Bt_Click(object sender, EventArgs e)
@@ -104,16 +119,19 @@ namespace GG_RPS
                 {
                     //r
                     win = 2;
+                    pb4.Image = Image.FromFile("../../img/rock.png");
                 }
                 else if (bot1 == 2)
                 {
                     //p
                     win = 0;
+                    pb4.Image = Image.FromFile("../../img/paper.png");
                 }
                 else if (bot1 == 3)
                 {
                     //s
                     win = 1;
+                    pb4.Image = Image.FromFile("../../img/Scissors.png");
                 }
 
             }
@@ -124,17 +142,21 @@ namespace GG_RPS
                 {
                     //r
                     win = 1;
+                    pb4.Image = Image.FromFile("../../img/rock.png");
                 }
                 else if (bot1 == 2)
                 {
                     //p
                     win = 2;
+                    pb4.Image = Image.FromFile("../../img/paper.png");
                 }
                 else if (bot1 == 3)
                 {
                     //s
                     win = 0;
+                    pb4.Image = Image.FromFile("../../img/Scissors.png");
                 }
+
             }   
             //s
             else if (choose == 3)
@@ -143,17 +165,21 @@ namespace GG_RPS
                 {
                     //r
                     win = 0;
+                    pb4.Image = Image.FromFile("../../img/rock.png");
                 }
                 else if (bot1 == 2)
                 {
                     //p
                     win = 1;
+                    pb4.Image = Image.FromFile("../../img/paper.png");
                 }
                 else if (bot1 == 3)
                 {
                     //s
                     win = 2;
+                    pb4.Image = Image.FromFile("../../img/Scissors.png");
                 }
+
             }
             if (win == 1)
             {
@@ -172,19 +198,22 @@ namespace GG_RPS
         private void Pb_MouseClick(object sender, MouseEventArgs e)
         {
             choose = 1;
+            pb3.Image = Image.FromFile("../../img/rock.png");
+
         }
         private void Pb1_MouseClick(object sender, MouseEventArgs e)
         {
             choose = 2;
+            pb3.Image = Image.FromFile("../../img/paper.png");
         }
         private void Pb2_MouseClick(object sender, MouseEventArgs e)
         {
             choose = 3;
+            pb3.Image = Image.FromFile("../../img/Scissors.png");
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
