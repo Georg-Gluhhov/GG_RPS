@@ -1,5 +1,4 @@
-﻿
-namespace GG_RPS
+﻿namespace GG_RPS
 {
     partial class save
     {

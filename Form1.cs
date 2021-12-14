@@ -57,7 +57,7 @@ namespace GG_RPS
             pb3.Location = new Point(200, 300);
             pb3.ImageLocation = ("../../img/rock.png");
             pb3.SizeMode = PictureBoxSizeMode.StretchImage;
-            this.Controls.Add(pb3);   
+            this.Controls.Add(pb3);
             //Result bot 
             pb4 = new PictureBox();
             pb4.Size = new Size(100, 100);
@@ -65,9 +65,6 @@ namespace GG_RPS
             pb4.ImageLocation = ("../../img/rock.png");
             pb4.SizeMode = PictureBoxSizeMode.StretchImage;
             this.Controls.Add(pb4);
-
-
-
 
             //Start Button
             bt = new Button();
@@ -96,8 +93,6 @@ namespace GG_RPS
             lbl1.Location = new Point(200, 600);
             this.Controls.Add(lbl1);
             this.BackColor = System.Drawing.Color.White;
-
-
         }
 
         private void Bt1_Click(object sender, EventArgs e)
@@ -109,11 +104,11 @@ namespace GG_RPS
             Show();
         }
 
-        private void Bt_Click(object sender, EventArgs e)
+        public void Bt_Click(object sender, EventArgs e)
         {
             int bot1 = rnd.Next(1, 4);
             //r
-            if(choose == 1)
+            if (choose == 1)
             {
                 if (bot1 == 1)
                 {
@@ -157,7 +152,7 @@ namespace GG_RPS
                     pb4.Image = Image.FromFile("../../img/Scissors.png");
                 }
 
-            }   
+            }
             //s
             else if (choose == 3)
             {
@@ -191,7 +186,7 @@ namespace GG_RPS
             }
             lbl.Text = $"{score} Score {bscore}";
             lbl1.Text = $"win{win} choose{choose} bscore{bscore} score{score} botchoose{bot1}";
-
+            int endscore = score - bscore;
 
         }
 
@@ -213,7 +208,7 @@ namespace GG_RPS
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
         }
     }
 }
