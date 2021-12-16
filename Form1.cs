@@ -28,6 +28,7 @@ namespace GG_RPS
             this.Width = 1280;
 
             //Rock
+
             pb = new PictureBox();
             pb.Size = new Size(100, 100);
             pb.Location = new Point(200, 100);
@@ -72,7 +73,7 @@ namespace GG_RPS
             bt.Location = new Point(600, 600);
             bt.Click += Bt_Click;
             this.Controls.Add(bt);
-
+            bt.Enabled = false;
             //Save Button
             bt1 = new Button();
             bt1.Text = "Salvesta skoor";
@@ -211,18 +212,20 @@ namespace GG_RPS
         {
             choose = 1;
             pb3.Image = Image.FromFile("../../img/rock.png");
-
+            bt.Enabled = true;
         }
 
         private void Pb1_MouseClick(object sender, MouseEventArgs e)
         {
             choose = 2;
             pb3.Image = Image.FromFile("../../img/paper.png");
+            bt.Enabled = true;
         }
         private void Pb2_MouseClick(object sender, MouseEventArgs e)
         {
             choose = 3;
             pb3.Image = Image.FromFile("../../img/Scissors.png");
+            bt.Enabled = true;
         }
         private void Form1_Load(object sender, EventArgs e)
         {
