@@ -20,3 +20,4 @@ C:\Users\Mrwoodu\Source\Repos\GG_RPS1\obj\Debug\GG_RPS.csproj.GenerateResource.c
 C:\Users\Mrwoodu\Source\Repos\GG_RPS1\obj\Debug\GG_RPS.csproj.CoreCompileInputs.cache
 C:\Users\Mrwoodu\Source\Repos\GG_RPS1\obj\Debug\GG_RPS.exe
 C:\Users\Mrwoodu\Source\Repos\GG_RPS1\obj\Debug\GG_RPS.pdb
+C:\Users\Mrwoodu\Source\Repos\GG_RPS1\obj\Debug\GG_RPS.leaderboard.resources

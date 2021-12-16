@@ -84,7 +84,7 @@ namespace GG_RPS
             bt2 = new Button();
             bt2.Text = "Edetabel";
             bt2.Location = new Point(400, 600);
-            bt2.Click += Bt1_Click;
+            bt2.Click += Bt2_Click;
             this.Controls.Add(bt2);
 
             //Lbl Result 
@@ -101,6 +101,15 @@ namespace GG_RPS
 
 
             this.BackColor = System.Drawing.Color.White;
+        }
+
+        private void Bt2_Click(object sender, EventArgs e)
+        {
+            Hide();
+            leaderboard Lead = new leaderboard();
+            Lead.ShowDialog();
+            Lead = null;
+            Show();
         }
 
         private void Bt1_Click(object sender, EventArgs e)
