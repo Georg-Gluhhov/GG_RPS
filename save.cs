@@ -25,7 +25,7 @@ namespace GG_RPS
             this.Controls.Add(tb);
 
             bt = new Button();
-            bt.Text = "";
+            bt.Text = "Salvesta";
             bt.Location = new Point(100, 200);
             bt.Click += Bt_Click;
             this.Controls.Add(bt);
@@ -46,6 +46,7 @@ namespace GG_RPS
             int b = bscore;
             int s = score;
             ExampleAsync(s,b,a);
+            Hide();
         }
 
         public static void ExampleAsync(int score1, int bscore1, string name)
@@ -55,6 +56,7 @@ namespace GG_RPS
             tsw.WriteLine($"Name {name} Score - {score1} BotScore -{bscore1}");
 
             tsw.Close();
+
         }
 
         private void save_Load(object sender, EventArgs e)
