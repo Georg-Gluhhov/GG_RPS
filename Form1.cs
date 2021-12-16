@@ -14,13 +14,13 @@ namespace GG_RPS
     {
         PictureBox pb, pb1, pb2, pb3, pb4;
         Label lbl, lbl1, lbl2;
-        Button bt, bt1;
+        Button bt, bt1, bt2;
         Random rnd = new Random();
 
-        public int choose = 0;
-        public int win = 0;
-        public int score = 0;
-        public int bscore = 0;
+        public static int choose = 0;
+        public static int win = 0;
+        public static int score = 0;
+        public static int bscore = 0;
 
         public Form1()
         {
@@ -68,30 +68,38 @@ namespace GG_RPS
 
             //Start Button
             bt = new Button();
-            bt.Text = "Сравнить";
+            bt.Text = "Alusta";
             bt.Location = new Point(600, 600);
             bt.Click += Bt_Click;
             this.Controls.Add(bt);
 
             //Save Button
             bt1 = new Button();
-            bt1.Text = "Сохранить";
+            bt1.Text = "Salvesta skoor";
             bt1.Location = new Point(800, 600);
             bt1.Click += Bt1_Click;
             this.Controls.Add(bt1);
 
+            //Save Button
+            bt2 = new Button();
+            bt2.Text = "Edetabel";
+            bt2.Location = new Point(400, 600);
+            bt2.Click += Bt1_Click;
+            this.Controls.Add(bt2);
+
             //Lbl Result 
             lbl = new Label();
-            lbl.Text = $"{score} Score {score}";
+            lbl.Text = $"{score} skoor {score}";
             lbl.Size = new Size(100, 100);
             lbl.Location = new Point(590, 360);
             this.Controls.Add(lbl);
             //Lbl test 
             lbl1 = new Label();
-            lbl1.Text = $"{score} Score {score}";
+            lbl1.Text = $"{score} skoor {score}";
             lbl1.Size = new Size(100, 100);
             lbl1.Location = new Point(200, 600);
-            this.Controls.Add(lbl1);
+
+
             this.BackColor = System.Drawing.Color.White;
         }
 
@@ -186,7 +194,7 @@ namespace GG_RPS
             }
             lbl.Text = $"{score} Score {bscore}";
             lbl1.Text = $"win{win} choose{choose} bscore{bscore} score{score} botchoose{bot1}";
-            int endscore = score - bscore;
+            
 
         }
 
@@ -196,6 +204,7 @@ namespace GG_RPS
             pb3.Image = Image.FromFile("../../img/rock.png");
 
         }
+
         private void Pb1_MouseClick(object sender, MouseEventArgs e)
         {
             choose = 2;

@@ -9,3 +9,14 @@ C:\Users\opilane\source\repos\GG_RPS\bin\Debug\GG_RPS.pdb
 C:\Users\opilane\source\repos\GG_RPS\obj\Debug\GG_RPS.exe
 C:\Users\opilane\source\repos\GG_RPS\obj\Debug\GG_RPS.pdb
 C:\Users\opilane\source\repos\GG_RPS\obj\Debug\GG_RPS.save.resources
+C:\Users\Mrwoodu\Source\Repos\GG_RPS1\bin\Debug\GG_RPS.exe.config
+C:\Users\Mrwoodu\Source\Repos\GG_RPS1\bin\Debug\GG_RPS.exe
+C:\Users\Mrwoodu\Source\Repos\GG_RPS1\bin\Debug\GG_RPS.pdb
+C:\Users\Mrwoodu\Source\Repos\GG_RPS1\obj\Debug\GG_RPS.csprojAssemblyReference.cache
+C:\Users\Mrwoodu\Source\Repos\GG_RPS1\obj\Debug\GG_RPS.Form1.resources
+C:\Users\Mrwoodu\Source\Repos\GG_RPS1\obj\Debug\GG_RPS.Properties.Resources.resources
+C:\Users\Mrwoodu\Source\Repos\GG_RPS1\obj\Debug\GG_RPS.save.resources
+C:\Users\Mrwoodu\Source\Repos\GG_RPS1\obj\Debug\GG_RPS.csproj.GenerateResource.cache
+C:\Users\Mrwoodu\Source\Repos\GG_RPS1\obj\Debug\GG_RPS.csproj.CoreCompileInputs.cache
+C:\Users\Mrwoodu\Source\Repos\GG_RPS1\obj\Debug\GG_RPS.exe
+C:\Users\Mrwoodu\Source\Repos\GG_RPS1\obj\Debug\GG_RPS.pdb
