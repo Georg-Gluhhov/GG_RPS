@@ -92,14 +92,19 @@ namespace GG_RPS
             lbl = new Label();
             lbl.Text = $"{score} skoor {score}";
             lbl.Size = new Size(100, 100);
-            lbl.Location = new Point(590, 360);
+            lbl.Location = new Point(600, 360);
             this.Controls.Add(lbl);
             //Lbl test 
             lbl1 = new Label();
             lbl1.Text = $"{score} skoor {score}";
             lbl1.Size = new Size(100, 100);
             lbl1.Location = new Point(200, 600);
-
+            //Lbl test 
+            lbl2 = new Label();
+            lbl2.Text = "vali oma relv";
+            lbl2.Size = new Size(100, 100);
+            lbl2.Location = new Point(600, 50);
+            this.Controls.Add(lbl2);
 
             this.BackColor = System.Drawing.Color.White;
         }
